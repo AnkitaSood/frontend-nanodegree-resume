@@ -3,32 +3,43 @@
 <head>
     <meta charset="utf-8">
     <title>Resume</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
     <meta name="viewport" content="width=device-width">
 </head>
 
-<body>
-    <div id="main">
-        <div id="header" class="center-content clear-fix">
-            <ul id="topContacts" class="flex-box"></ul>
+<body data-spy="scroll" data-target="#nav-bar">
+    <div class="page">
+        <nav role="navigation" id="nav-bar" class="nav-bar">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active"><a href="#header">About Me</a></li>
+                <li role="presentation"><a href="#workExperience">Work Experience</a></li>
+                <li role="presentation"><a href="#cases">Cases Solved</a></li>
+                <li role="presentation"><a href="#education">Education</a></li>
+                <li role="presentation"><a href="#mapDiv">My Paw Print</a></li>
+            </ul>
+        </nav>
+        <div id="header" class="">
+            <div class="name"></div>
         </div>
-        <div style="clear: both;"></div>
-        <div id="workExperience" class="gray">
+        <div id="workExperience" class="">
             <h2>Work Experience</h2>
         </div>
-        <div id="projects">
-            <h2>Projects</h2>
+        <div id="cases">
+            <h2>Cases Solved</h2>
         </div>
-        <div id="education" class="gray">
+        <div id="education" class="">
             <h2>Education</h2>
         </div>
         <div id="mapDiv">
-            <h2>Where I've Lived and Worked</h2>
+            <h2>My Paw Print</h2>
         </div>
-        <div id="lets-connect" class="dark-gray">
-            <h2 class="orange center-text">Let's Connect</h2>
+        <div id="lets-connect" class="lets-connect">
+            <!--  <h2 class="orange center-text">Let's Connect</h2> -->
             <ul id="footerContacts" class="flex-box">
             </ul>
         </div>
@@ -36,27 +47,27 @@
     <script src="js/helper.js"></script>
     <script src="js/resumeBuilder.js"></script>
     <script>
-    if (document.getElementsByClassName('flex-item').length === 0) {
-        document.getElementById('topContacts').style.display = 'none';
-    }
-    if (document.getElementsByTagName('h1').length === 0) {
-        document.getElementById('header').style.display = 'none';
-    }
-    if (document.getElementsByClassName('work-entry').length === 0) {
-        document.getElementById('workExperience').style.display = 'none';
-    }
-    if (document.getElementsByClassName('project-entry').length === 0) {
-        document.getElementById('projects').style.display = 'none';
-    }
-    if (document.getElementsByClassName('education-entry').length === 0) {
-        document.getElementById('education').style.display = 'none';
-    }
-    if (document.getElementsByClassName('flex-item').length === 0) {
-        document.getElementById('lets-connect').style.display = 'none';
-    }
-    if (document.getElementById('map') === null) {
-        document.getElementById('mapDiv').style.display = 'none';
-    }
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('topContacts').style.display = 'none';
+        }
+        if (document.getElementsByTagName('h1').length === 0) {
+            document.getElementById('header').style.display = 'none';
+        }
+        if (document.getElementsByClassName('work-entry').length === 0) {
+            document.getElementById('workExperience').style.display = 'none';
+        }
+        if (document.getElementsByClassName('crime-entry').length === 0) {
+            document.getElementById('cases').style.display = 'none';
+        }
+        if (document.getElementsByClassName('education-entry').length === 0) {
+            document.getElementById('education').style.display = 'none';
+        }
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('lets-connect').style.display = 'none';
+        }
+        if (document.getElementById('map') === null) {
+            document.getElementById('mapDiv').style.display = 'none';
+        }
     </script>
 </body>
 
