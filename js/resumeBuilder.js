@@ -28,13 +28,13 @@ bio.display = function display() {
   /*$(".main-img").append();*/
   $('#header').append(biopic, wmsg, HTMLskillsStart);
 
-  if (bio.skills.length != 0) {
+  if (bio.skills.length !== 0) {
     /*Loop through the skills array to read entire list, replace the dummy with actual data in each li element.
        Append the li items to HTML */
     $.each(bio.skills, function(i, skill) {
       skillsList = HTMLskills.replace('%data%', skill);
       $('#skills').append(skillsList);
-    })
+    });
   }
 
   /*Loop through the contacts object, replace dummy contact*/
@@ -43,7 +43,7 @@ bio.display = function display() {
     $('#topContacts').append(contactWays);
     $('#footerContacts').append(contactWays);
   });
-}
+};
 
 var work = {
   "jobs": [{
@@ -72,8 +72,8 @@ work.display = function display() {
       description = HTMLworkDescription.replace('%data%', job.description);
 
     $(".work-entry:last").append(employer + title, duration, location, description);
-  })
-}
+  });
+};
 
 var crimeCases = {
   "cases": [{
@@ -87,7 +87,7 @@ var crimeCases = {
     "description": "While working as a meter-maid, noticed a criminal running away with stolen plant-bulbs. Energetically and enthusiastically chased and followed him to Little Rodentia. With my quick thinking and presense of mind, captured the thief using a doughnut.",
     "images": ["images/case2-thumb1.jpg", "images/case2-thumb2.jpg", "images/case2-thumb3.jpg"]
   }]
-}
+};
 
 crimeCases.display = function display() {
   /*For each crime entry, read data from JSON and append after replacing it with dummy data*/
@@ -103,7 +103,7 @@ crimeCases.display = function display() {
       $('.crime-entry:last').append(images);
     });
   });
-}
+};
 
 var education = {
   "schools": [{
@@ -155,7 +155,7 @@ education.display = function display() {
 
     $('.education-entry:last').append(title + school, dates, url);
   });
-}
+};
 
 var mapLocations = {
   "Disneyland Park": "My ideal vacation place!",
@@ -163,7 +163,7 @@ var mapLocations = {
   "Disney's Animal Kingdom Theme Park": "Work place. Love hanging out with all the other animals here.",
   "Disney's Hollywood Studios": "Photo shoots and press conferences happen here."
 
-}
+};
 
 /*Call all the display methods for each page section*/
 bio.display();
